@@ -1,0 +1,33 @@
+<div class="logIn" [ngStyle] = "{'height':elHeight}">
+  <div class="logInFormBox">
+    <div class="formBoxTitle">
+
+    </div>
+    <div class="form">
+      <div class="inputCtr uNameBox">
+        <div class="iptIcon lIcon">
+          <img src="../../assets/images/icon_person.png" alt="">
+        </div>
+        <input type="text" placeholder="请输入手机号" class="logInuName">
+        <div class="iptIcon rIcon"></div>
+      </div>
+      <div class="inputCtr uPwdBox">
+        <div class="iptIcon lIcon">
+          <img src="../../assets/images/icon_lock.png" alt="">
+        </div>
+        <input type="password" placeholder="请输入密码" class="logInuPwd">
+        <div class="iptIcon rIcon">
+          <img src="../../assets/images/icon_eye.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="assist">
+      <a class="fl">忘记密码</a>
+      <a class="fr" routerLink="/regist">免费注册</a>
+    </div>
+    <button routerLink="/main" class="logInBtn bigBtn">
+      登陆
+    </button>
+  </div>
+  <p class="gameVersion tc cl_w">游戏版本:01.10.16</p>
+</div>

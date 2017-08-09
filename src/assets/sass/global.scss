@@ -1,0 +1,143 @@
+//px->rem
+@function rem($n) {
+  @return ($n/41.4)+rem;
+}
+//globalStyle
+
+.bigBtn{//大按钮->注册/登录等
+  width: rem(167);
+  height: rem(60);
+  background: url(../images/dialog-btn-ok.png) no-repeat center;
+  background-size: 100% 100%;
+  color: #fff;
+  font-size: rem(27);
+  line-height: rem(50);
+  padding-bottom: rem(5);
+  vertical-align: middle;
+  text-align: center;
+  text-shadow: 0.03rem 0 0 #ba6000, -0.03rem 0 0 #ba6000, 0 0.03rem 0 #ba6000, 0 -0.03rem 0 #ba6000;
+  font-weight: bold;
+  border: none;
+  box-sizing: border-box;
+}
+.inputCtr{//input框
+  width: rem(243);
+  height: rem(44);
+  background: #FFFBF2;
+  border-radius: rem(6);
+  box-shadow: inset 0.015rem 0.026rem 0.05rem 0 hsla(43,10%,73%,.75);
+  border: none;
+  .iptIcon{
+    img{
+      width: 100%;
+    }
+  }
+  .lIcon{
+    width: rem(13);
+    height: rem(14);
+    float: left;
+    margin-left: rem(10);
+    margin-top: rem(12);
+  }
+  .rIcon{
+    width: rem(15);
+    height: rem(10);
+    float: right;
+    margin-right: rem(10);
+    margin-top: rem(12);
+  }
+  input{
+    width: rem(171);
+    height: rem(16);
+    margin-top: rem(17);
+    margin-left: rem(10);
+    display: block;
+    float: left;
+    border: none;
+    position: relative;
+    text-indent: rem(10);
+    color: #333;
+    border-left: 1px solid #efefef;
+    font-size: rem(14);
+  }
+  input::-webkit-input-placeholder{
+    color: #ccc;opacity:1;
+  }
+}
+
+
+/*登陆start*/
+  .logIn{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background: #B3E2F6 url(../images/bg-login.jpg) no-repeat bottom;
+    background-size: 100% auto;
+    .logInFormBox{
+      width: rem(309);
+      margin: 0 auto;
+      overflow: hidden;
+      margin-top: rem(126);
+      background: url(../images/login_form.png) no-repeat bottom;
+      background-size: 100% 85%;
+      .formBoxTitle{
+        width: rem(332);
+        height: rem(108);
+        background: url(../images/login_title2.png) no-repeat center;
+        background-size: auto 100%;
+      }
+      .form{
+        margin: 0 auto;
+        margin-top: rem(30);
+        width: rem(244);
+        overflow: hidden;
+        .inputCtr{
+          margin-top: rem(20);
+        }
+      }
+      .assist{
+        overflow: hidden;
+        margin: 0 auto;
+        width: 76%;
+        margin-top: rem(10);
+        color: #c67a3b;
+      }
+      .logInBtn{
+        display: block;
+        margin: rem(30) auto;
+      }
+    }
+    .gameVersion{
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: rem(46);
+      text-shadow: 0 0 2px rgba(0,0,0,.9);
+      font-size: rem(14);
+    }
+  }
+/*登陆end*/
+/************************************/
+/*
+  注册start
+*/
+.registRoot{
+  .logInFormBox{
+    .formBoxTitle{
+      margin: 0 auto;
+      margin-top: rem(6);
+      line-height: rem(110);
+      width: rem(160);
+      background: url(../images/reg_top.png) no-repeat center;
+      background-size: 100% auto;
+      font-size: rem(22);
+      color: #fff;
+      font-weight: bold;
+      text-shadow: -0.03rem 0 #6b8624, 0 0.03rem #6b8624, 0.03rem 0 #6b8624, 0 -0.03rem #6b8624;
+    }
+
+  }
+}
+/*
+  注册end
+*/

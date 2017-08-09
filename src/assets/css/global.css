@@ -1,0 +1,118 @@
+@charset "UTF-8";
+.bigBtn {
+  width: 4.03382rem;
+  height: 1.44928rem;
+  background: url(../images/dialog-btn-ok.png) no-repeat center;
+  background-size: 100% 100%;
+  color: #fff;
+  font-size: 0.65217rem;
+  line-height: 1.20773rem;
+  padding-bottom: 0.12077rem;
+  vertical-align: middle;
+  text-align: center;
+  text-shadow: 0.03rem 0 0 #ba6000, -0.03rem 0 0 #ba6000, 0 0.03rem 0 #ba6000, 0 -0.03rem 0 #ba6000;
+  font-weight: bold;
+  border: none;
+  box-sizing: border-box; }
+
+.inputCtr {
+  width: 5.86957rem;
+  height: 1.0628rem;
+  background: #FFFBF2;
+  border-radius: 0.14493rem;
+  box-shadow: inset 0.015rem 0.026rem 0.05rem 0 rgba(193, 189, 179, 0.75);
+  border: none; }
+  .inputCtr .iptIcon img {
+    width: 100%; }
+  .inputCtr .lIcon {
+    width: 0.31401rem;
+    height: 0.33816rem;
+    float: left;
+    margin-left: 0.24155rem;
+    margin-top: 0.28986rem; }
+  .inputCtr .rIcon {
+    width: 0.36232rem;
+    height: 0.24155rem;
+    float: right;
+    margin-right: 0.24155rem;
+    margin-top: 0.28986rem; }
+  .inputCtr input {
+    width: 4.13043rem;
+    height: 0.38647rem;
+    margin-top: 0.41063rem;
+    margin-left: 0.24155rem;
+    display: block;
+    float: left;
+    border: none;
+    position: relative;
+    text-indent: 0.24155rem;
+    color: #333;
+    border-left: 1px solid #efefef;
+    font-size: 0.33816rem; }
+  .inputCtr input::-webkit-input-placeholder {
+    color: #ccc;
+    opacity: 1; }
+
+/*登陆start*/
+.logIn {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: #B3E2F6 url(../images/bg-login.jpg) no-repeat bottom;
+  background-size: 100% auto; }
+  .logIn .logInFormBox {
+    width: 7.46377rem;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 3.04348rem;
+    background: url(../images/login_form.png) no-repeat bottom;
+    background-size: 100% 85%; }
+    .logIn .logInFormBox .formBoxTitle {
+      width: 8.01932rem;
+      height: 2.6087rem;
+      background: url(../images/login_title2.png) no-repeat center;
+      background-size: auto 100%; }
+    .logIn .logInFormBox .form {
+      margin: 0 auto;
+      margin-top: 0.72464rem;
+      width: 5.89372rem;
+      overflow: hidden; }
+      .logIn .logInFormBox .form .inputCtr {
+        margin-top: 0.48309rem; }
+    .logIn .logInFormBox .assist {
+      overflow: hidden;
+      margin: 0 auto;
+      width: 76%;
+      margin-top: 0.24155rem;
+      color: #c67a3b; }
+    .logIn .logInFormBox .logInBtn {
+      display: block;
+      margin: 0.72464rem auto; }
+  .logIn .gameVersion {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 1.11111rem;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.9);
+    font-size: 0.33816rem; }
+
+/*登陆end*/
+/************************************/
+/*
+  注册start
+*/
+.registRoot .logInFormBox .formBoxTitle {
+  margin: 0 auto;
+  margin-top: 0.14493rem;
+  line-height: 2.657rem;
+  width: 3.86473rem;
+  background: url(../images/reg_top.png) no-repeat center;
+  background-size: 100% auto;
+  font-size: 0.5314rem;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: -0.03rem 0 #6b8624, 0 0.03rem #6b8624, 0.03rem 0 #6b8624, 0 -0.03rem #6b8624; }
+
+/*
+  注册end
+*/
