@@ -7,11 +7,11 @@ const mainRoutes:Routes=[
   {
     path:'',
     component:MainComponent,
-    children:[
-      {
-
-      }
-    ]
+    //children:[
+    //  {
+    //
+    //  }
+    //]
   }
 ];
 

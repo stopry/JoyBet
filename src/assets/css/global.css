@@ -53,6 +53,121 @@
     color: #ccc;
     opacity: 1; }
 
+.treasureInfo {
+  width: 2.41546rem;
+  height: 0.70048rem;
+  position: relative;
+  background: url(../images/asset-num.png) no-repeat center;
+  background-size: cover; }
+  .treasureInfo .treasureNum {
+    display: block;
+    color: #fff;
+    text-indent: 0.57971rem;
+    line-height: 0.65217rem;
+    font-size: 0.28986rem;
+    text-shadow: 0 0 0.4em #b14e17, 0 0 0.4em #b14e17; }
+  .treasureInfo.uJewel:before {
+    background: url(../images/icon-diamond-3.png) 50% no-repeat;
+    background-size: contain;
+    width: 0.67633rem;
+    height: 0.74879rem;
+    position: absolute;
+    left: -0.12077rem;
+    top: 50%;
+    transform: translateY(-50%);
+    content: " "; }
+  .treasureInfo.uJewel:after {
+    background: url(../images/icon-plus.png) 50% no-repeat;
+    background-size: contain;
+    width: 0.5314rem;
+    height: 0.45894rem;
+    position: absolute;
+    right: 0.14493rem;
+    top: 50%;
+    transform: translateY(-50%);
+    content: " "; }
+  .treasureInfo.uFlower:before {
+    background: url(../images/icon-flower.png) 50% no-repeat;
+    background-size: contain;
+    width: 0.67633rem;
+    height: 0.74879rem;
+    position: absolute;
+    left: -0.24155rem;
+    top: 50%;
+    transform: translateY(-50%);
+    content: " "; }
+  .treasureInfo.uFlower:after {
+    background: url(../images/icon-plus.png) 50% no-repeat;
+    background-size: contain;
+    width: 0.5314rem;
+    height: 0.45894rem;
+    position: absolute;
+    right: 0.14493rem;
+    top: 50%;
+    transform: translateY(-50%);
+    content: " "; }
+
+.HeaderImgText {
+  width: 1.17295rem; }
+  .HeaderImgText .btnWrap {
+    position: relative;
+    width: 1.17295rem;
+    height: 1.21304rem;
+    background: url(../images/btn-menu.png) no-repeat center;
+    background-size: 100% 100%; }
+    .HeaderImgText .btnWrap.live:before {
+      position: absolute;
+      width: 1.17295rem;
+      height: 1.21304rem;
+      background: url(../images/icon-menu-zhibo.png) no-repeat center;
+      background-size: 46% 46%;
+      content: ''; }
+    .HeaderImgText .btnWrap.shop:before {
+      position: absolute;
+      width: 1.17295rem;
+      height: 1.21304rem;
+      background: url(../images/icon-menu-cart.png) no-repeat center;
+      background-size: 46% 46%;
+      content: ''; }
+    .HeaderImgText .btnWrap.recharge:before {
+      position: absolute;
+      width: 1.17295rem;
+      height: 1.21304rem;
+      background: url(../images/icon-menu-wallet.png) no-repeat center;
+      background-size: 46% 46%;
+      content: ''; }
+  .HeaderImgText .btnDesc {
+    text-align: center;
+    color: #fff;
+    font-size: 0.33816rem;
+    text-shadow: -1px 0 #336982, 0 1px #336982, 1px 0 #336982, 0 -1px #336982; }
+
+.boxWrap, .voteIndex, .voteList {
+  background: url(../images/panel-middle.png) no-repeat center;
+  background-size: 100% 96%;
+  position: relative;
+  padding-top: 1.20773rem; }
+  .boxWrap:before, .voteIndex:before, .voteList:before {
+    width: 100%;
+    height: 0.50725rem;
+    display: block;
+    content: " ";
+    background: url(../images/panel-top.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .boxWrap:after, .voteIndex:after, .voteList:after {
+    width: 100%;
+    height: 0.50725rem;
+    display: block;
+    content: " ";
+    background: url(../images/panel-bottom.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+
 /*登陆start*/
 .logIn {
   position: relative;
@@ -116,3 +231,323 @@
 /*
   注册end
 */
+/*主界面start*/
+.mainRoot {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #B3E2F6 url(../images/bg-game.jpg) no-repeat bottom;
+  background-size: 100% auto; }
+  .mainRoot .gameHelp {
+    text-align: center;
+    padding: 0.72464rem 0;
+    color: #fff;
+    font-size: 0.28986rem;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.9);
+    text-decoration: underline; }
+
+.mainHeader {
+  padding: 0.16908rem;
+  height: 2.48792rem; }
+  .mainHeader .headerLeft {
+    width: 5.24155rem;
+    position: relative; }
+    .mainHeader .headerLeft .uPic {
+      height: 1.07971rem;
+      width: 1.07971rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 0.07246rem;
+      left: 0.09179rem; }
+    .mainHeader .headerLeft .uName {
+      position: absolute;
+      color: #fff;
+      font-weight: bold;
+      font-size: 0.31401rem;
+      top: 0.36232rem;
+      left: 1.44928rem;
+      text-shadow: 0 0 0.4em #b14e17, 0 0 0.4em #b14e17;
+      white-space: nowrap; }
+    .mainHeader .headerLeft .treasureBox {
+      margin-top: 0.12077rem; }
+      .mainHeader .headerLeft .treasureBox .uJewel {
+        margin-left: 0.12077rem; }
+  .mainHeader .headerRight {
+    width: 3.91304rem;
+    margin-top: 0.24155rem;
+    margin-right: 0.24155rem; }
+    .mainHeader .headerRight .HeaderImgText {
+      float: left; }
+      .mainHeader .headerRight .HeaderImgText:nth-child(2) {
+        margin: 0 0.12077rem; }
+
+.chartNavBox {
+  margin: 0.28986rem auto 0.12077rem auto;
+  width: 8.98551rem;
+  height: auto;
+  overflow: hidden; }
+  .chartNavBox .chartNavBoxItem {
+    float: left;
+    width: 2.94686rem;
+    height: 1.0628rem;
+    background: url(../images/btn-green.png) no-repeat center;
+    background-size: 100% 100%;
+    font-size: 0.38647rem;
+    line-height: 1.0628rem;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: -0.025em -0.025em 0 #317206, 0.08em -0.025em 0 #317206, -0.025em 0.025em 0 #317206, 0.025em 0.025em 0 #317206; }
+    .chartNavBox .chartNavBoxItem:nth-child(2) {
+      margin: 0 0.07246rem; }
+    .chartNavBox .chartNavBoxItem.active {
+      background: url(../images/btn-orange.png) no-repeat center;
+      background-size: 100% 100%; }
+    .chartNavBox .chartNavBoxItem.disabled {
+      filter: grayscale(100%);
+      opacity: .8; }
+
+/*主界面end*/
+/*投票指数start*/
+.voteIndex {
+  width: 9.2029rem;
+  height: 9.68599rem;
+  margin: 0.7971rem auto 0.48309rem auto; }
+  .voteIndex .voteTitle {
+    width: 5.60386rem;
+    height: 1.54589rem;
+    position: absolute;
+    background: url(../images/panel-head.png) no-repeat center;
+    text-align: center;
+    left: 1.72705rem;
+    top: -0.67633rem;
+    background-size: 100% 100%; }
+    .voteIndex .voteTitle img {
+      width: 45%;
+      margin-top: 0.19324rem; }
+  .voteIndex .musicCtrl {
+    position: absolute;
+    width: 0.7971rem;
+    height: 0.82126rem;
+    background: url(../images/btn-dot.png) no-repeat center;
+    background-size: 100% 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 0.33816rem;
+    line-height: 0.7971rem;
+    right: 0.43478rem;
+    top: -0.36232rem; }
+  .voteIndex .progressBox {
+    width: 8.42995rem;
+    height: 0.60386rem;
+    margin: 0 auto;
+    box-sizing: border-box; }
+    .voteIndex .progressBox .gressTitle {
+      width: 1.71498rem;
+      height: 0.60386rem;
+      line-height: 0.60386rem;
+      position: relative;
+      z-index: 100;
+      color: #8c5e28;
+      text-align: center;
+      float: left;
+      border-radius: 4px;
+      box-shadow: 0 1px 2px 0 #c1ac72;
+      background-image: -webkit-linear-gradient(90deg, #fda81a, #fecb42); }
+    .voteIndex .progressBox .progressCon {
+      width: 6.52174rem;
+      height: 0.60386rem;
+      position: relative;
+      float: right;
+      background: url(../images/progress-middle.png) no-repeat center;
+      background-size: 96% 100%; }
+      .voteIndex .progressBox .progressCon:before {
+        background: url(../images/progress-left.png) no-repeat center;
+        background-size: 100% 100%;
+        position: absolute;
+        height: 0.60386rem;
+        width: 0.19324rem;
+        left: 0;
+        top: 0;
+        content: ''; }
+      .voteIndex .progressBox .progressCon:after {
+        background: url(../images/progress-right.png) no-repeat center;
+        background-size: 100% 100%;
+        height: 0.60386rem;
+        width: 0.19324rem;
+        position: absolute;
+        right: 0;
+        top: 0;
+        content: ''; }
+      .voteIndex .progressBox .progressCon .progressBar {
+        position: absolute;
+        width: 6.37681rem;
+        z-index: 3;
+        height: 0.43478rem;
+        top: 0.08454rem;
+        left: 0.07246rem;
+        box-shadow: inset 0 -1px 10px 0 #008616;
+        background-image: -webkit-linear-gradient(90deg, #81d231, #e6fd9d); }
+      .voteIndex .progressBox .progressCon .countDown {
+        width: 100%;
+        position: absolute;
+        line-height: 0.48309rem;
+        z-index: 4;
+        text-align: center;
+        top: 0.07246rem;
+        left: 0;
+        color: #fff; }
+  .voteIndex #chart-wrap {
+    width: 8.42995rem;
+    height: 4.68599rem;
+    margin: 0.24155rem auto;
+    background: #fff6d8;
+    box-shadow: 0 1px 1px 2px #c9b482; }
+  .voteIndex .selJewel {
+    width: 9.2029rem;
+    height: 1.76329rem;
+    overflow: hidden; }
+    .voteIndex .selJewel .jewelItem {
+      width: 1.73309rem;
+      height: 1.59976rem;
+      box-shadow: 0 0.01rem 0.01rem 0.01rem rgba(173, 122, 50, 0.4);
+      background: #fff7db;
+      border-radius: 0.07246rem;
+      text-align: center;
+      margin-left: 0.45411rem;
+      color: #dde3e6;
+      text-shadow: -1px 0 #3a230a, 0 1px #3a230a, 1px 0 #3a230a, 0 -1px #3a230a; }
+      .voteIndex .selJewel .jewelItem .innerBg {
+        width: 1.54589rem;
+        height: 1.42512rem;
+        margin: 0.08696rem auto;
+        background: #e5c28a;
+        box-shadow: 0 2px 4px 0 rgba(193, 172, 113, 0.8), inset 0 -1px 0.75px 0.25px rgba(173, 122, 50, 0.8); }
+        .voteIndex .selJewel .jewelItem .innerBg.active {
+          background: #f1ac3b; }
+        .voteIndex .selJewel .jewelItem .innerBg img {
+          width: 0.87971rem;
+          height: 0.87971rem; }
+      .voteIndex .selJewel .jewelItem:nth-child(2) {
+        color: #fbe107; }
+      .voteIndex .selJewel .jewelItem:nth-child(3) {
+        color: #f75e48; }
+      .voteIndex .selJewel .jewelItem:nth-child(4) {
+        color: #239eec; }
+  .voteIndex .voteArea {
+    margin-top: 0.12077rem;
+    display: table;
+    width: 100%;
+    text-align: center; }
+    .voteIndex .voteArea .voteBtn {
+      text-shadow: -0.025em -0.025em 0 #bc2933, 0.08em -0.025em 0 #bc2933, -0.025em 0.025em 0 #bc2933, 0.025em 0.025em 0 #bc2933;
+      vertical-align: middle;
+      display: inline-block;
+      width: 3.55072rem;
+      height: 1.35266rem;
+      background-size: cover !important; }
+      .voteIndex .voteArea .voteBtn.voteRed {
+        background: url(../images/btn-buy-raise.png) no-repeat center; }
+      .voteIndex .voteArea .voteBtn.voteGreen {
+        background: url(../images/btn-buy-fall.png) no-repeat center;
+        text-shadow: -0.025em -0.025em 0 #317206, 0.08em -0.025em 0 #317206, -0.025em 0.025em 0 #317206, 0.025em 0.025em 0 #317206; }
+      .voteIndex .voteArea .voteBtn h3 {
+        font-size: 0.43478rem;
+        color: #fff;
+        line-height: 0.57971rem;
+        margin-top: 0.14493rem;
+        font-weight: bold; }
+      .voteIndex .voteArea .voteBtn p {
+        color: #fff;
+        font-size: 0.28986rem; }
+    .voteIndex .voteArea .reaIcon {
+      vertical-align: middle;
+      margin: 0.24155rem 0.14493rem 0 0.14493rem;
+      display: inline-block;
+      width: 1.0628rem;
+      height: 1.3285rem;
+      background: url(../images/btn-buy-rd.png) no-repeat center;
+      background-size: cover !important; }
+  .voteIndex .chartTypeChange {
+    position: absolute;
+    width: 0.5314rem;
+    height: 3.86473rem;
+    left: -0.1256rem;
+    top: 2.41546rem; }
+    .voteIndex .chartTypeChange .changeBtn {
+      position: relative;
+      width: 0.5314rem;
+      height: 1.64251rem;
+      margin: 0.16908rem auto;
+      border-radius: 0.09662rem 0 0 0.09662rem;
+      background-image: -webkit-linear-gradient(180deg, #7be932, #67d022 62%, #53b612);
+      text-align: center;
+      font-size: 0.28986rem;
+      color: #fff;
+      line-height: 0.77295rem; }
+      .voteIndex .chartTypeChange .changeBtn.active {
+        background-image: -webkit-linear-gradient(180deg, #fdbd3a, #f3a22e 62%, #e88721); }
+        .voteIndex .chartTypeChange .changeBtn.active:before {
+          position: absolute;
+          content: " ";
+          height: 1.64251rem;
+          width: 0.24155rem;
+          right: -0.24155rem;
+          top: 0;
+          background: url(../images/chart-tab-active.png) no-repeat center;
+          background-size: cover; }
+
+/*投票指数end*/
+/*投票列表start*/
+.voteList {
+  width: 9.2029rem;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden; }
+  .voteList .tableHeader {
+    top: 0.36232rem;
+    left: 0.24155rem;
+    position: relative;
+    z-index: 4;
+    width: 8.64734rem;
+    height: 0.91787rem; }
+    .voteList .tableHeader:before {
+      width: 9.2029rem;
+      height: 0.12077rem;
+      position: absolute;
+      left: 0;
+      background: url(../images/tab-shadow.png) no-repeat center;
+      background-size: 100% auto;
+      bottom: -0.12077rem;
+      content: ''; }
+    .voteList .tableHeader .tableBtn {
+      float: left;
+      width: 2.63285rem;
+      height: 0.91787rem;
+      color: #b77346;
+      text-shadow: -0.025em -0.025em 0 #fff, 0.08em -0.025em 0 #fff, -0.025em 0.025em 0 #fff, 0.025em 0.025em 0 #fff;
+      font-size: 0.43478rem;
+      font-weight: bold;
+      text-align: center;
+      line-height: 0.91787rem;
+      margin-left: 0.12077rem; }
+      .voteList .tableHeader .tableBtn.active {
+        background: url(../images/tab-active.png) no-repeat center;
+        background-size: cover; }
+  .voteList .tableContent {
+    width: 8.64734rem;
+    height: 7.24638rem;
+    position: relative;
+    z-index: 4;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+    margin: 0.72464rem auto 0.48309rem auto; }
+    .voteList .tableContent .noContent {
+      color: #3a230a;
+      text-align: center;
+      width: 100%;
+      height: 7.24638rem;
+      line-height: 7.24638rem;
+      font-size: 0.28986rem; }
+
+/*投票列表end*/

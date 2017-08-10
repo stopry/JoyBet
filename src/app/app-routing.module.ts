@@ -14,7 +14,7 @@ const appRoutes:Routes = [
   },
   {//游戏模块
     path: 'main',
-    loadChildren: './main/main.module',
+    loadChildren: './main/main.module#MainModule',
     //data: { preload: true }
   },
   {

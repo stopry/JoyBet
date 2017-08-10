@@ -1,5 +1,65 @@
-<div class="main-root">
-  <h3>
-    主界面
-  </h3>
+<div class="mainRoot" [ngStyle] = "{'height':elHeight}">
+  <header class="mainHeader w100">
+    <div class="headerItem headerLeft fl">
+      <div class="w100 baseInfoBox">
+        <img src="../../assets/images/user-head.png" class="userImgBg w100" alt="">
+        <img class="uPic" src="../../assets/images/default-avatar.png" alt="">
+        <span class="uName">
+          13855418476
+        </span>
+      </div>
+      <div class="w100 treasureBox">
+        <div class="treasureInfo uJewel fl">
+          <span class="treasureNum">11111</span>
+        </div>
+        <div class="treasureInfo uFlower fr">
+          <span class="treasureNum">11111</span>
+        </div>
+      </div>
+    </div>
+    <div class="headerItem headerRight fr">
+      <div class="HeaderImgText">
+        <div class="btnWrap live">
+
+        </div>
+        <p class="tc btnDesc">
+          直播
+        </p>
+      </div>
+      <div class="HeaderImgText">
+        <div class="btnWrap shop">
+
+        </div>
+        <p class="tc btnDesc">
+          商城
+        </p>
+      </div>
+      <div class="HeaderImgText">
+        <div class="btnWrap recharge">
+
+        </div>
+        <p class="tc btnDesc">
+          充值
+        </p>
+      </div>
+    </div>
+  </header>
+  <div class="chartNavBox">
+    <div class="chartNavBoxItem active">
+      B
+    </div>
+    <div class="chartNavBoxItem">
+      Y
+    </div>
+    <div class="chartNavBoxItem disabled">
+      H
+    </div>
+  </div>
+  <!--投票指数-->
+  <vote-index></vote-index>
+  <!--投票列表-->
+  <vote-list></vote-list>
+  <p class="gameHelp tc cl_w">
+    游戏帮助
+  </p>
 </div>

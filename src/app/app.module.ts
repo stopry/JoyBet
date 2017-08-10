@@ -5,7 +5,6 @@ import { Router } from '@angular/router';
 import { FormsModule }    from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
-import {MainModule} from './main/main.module'
 
 import { AppComponent } from './app.component';
 import {LoginComponent} from './loginRegist/login.component'
@@ -20,7 +19,6 @@ import {RegistComponent} from './loginRegist/regist.component'
   imports: [//引入的模块
     BrowserModule,
     AppRoutingModule,
-    MainModule
   ],
   providers: [],//服务
   bootstrap: [AppComponent]//引导模块
