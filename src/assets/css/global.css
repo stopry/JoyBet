@@ -398,11 +398,15 @@
         left: 0;
         color: #fff; }
   .voteIndex #chart-wrap {
+    position: relative;
     width: 8.42995rem;
     height: 4.68599rem;
     margin: 0.24155rem auto;
     background: #fff6d8;
-    box-shadow: 0 1px 1px 2px #c9b482; }
+    box-shadow: 0 1px 1px 2px #c9b482;
+    overflow: hidden; }
+    .voteIndex #chart-wrap div, .voteIndex #chart-wrap canvas {
+      height: 100% !important; }
   .voteIndex .selJewel {
     width: 9.2029rem;
     height: 1.76329rem;
@@ -469,6 +473,7 @@
       background: url(../images/btn-buy-rd.png) no-repeat center;
       background-size: cover !important; }
   .voteIndex .chartTypeChange {
+    z-index: 3;
     position: absolute;
     width: 0.5314rem;
     height: 3.86473rem;

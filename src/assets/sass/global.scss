@@ -464,11 +464,21 @@
       }
     }
     #chart-wrap{
+      position: relative;
       width: rem(349);
       height: rem(194);
       margin: rem(10) auto;
       background: #fff6d8;
       box-shadow: 0 1px 1px 2px #c9b482;
+      overflow: hidden;
+      div,canvas{
+        //z-index: 2;
+        //width: 100% !important;
+        height: 100% !important;
+        //position: absolute;
+        //top:0;
+        //left: 0;
+      }
     }
     .selJewel{
       width: rem(381);
@@ -551,6 +561,7 @@
       }
     }
     .chartTypeChange{
+      z-index: 3;
       position: absolute;
       width: rem(22);
       height: rem(160);

@@ -17,12 +17,12 @@
     </div>
   </div>
   <div class="chartTypeChange">
-    <div class="changeBtn active kLine">
+    <div class="changeBtn active kLine" [ngClass]="{'active': chartType==1?true:false}" (click)="changeToKLine()">
       K
       <br/>
       线
     </div>
-    <div class="changeBtn fLine">
+    <div class="changeBtn fLine" [ngClass]="{'active': chartType==2?true:false}" (click)="changeToFLine()">
       分
       <br/>
       时
@@ -30,26 +30,26 @@
   </div>
   <!--图标start-->
   <div id="chart-wrap">
-
+    <echarts-ng2 #myEcharts></echarts-ng2>
   </div>
   <!--图标end-->
   <div class="selJewel">
     <div class="jewelItem fl">
-      <div class="innerBg active">
+      <div class="innerBg" (click)="selJewel(50,1)" [ngClass]="{'active':selType==1}">
         <img src="../../assets/images/icon-diamond-1.png" alt="">
         <p>50钻石</p>
       </div>
     </div>
     <div class="jewelItem fl">
-      <div class="innerBg">
+      <div class="innerBg" (click)="selJewel(200,2)" [ngClass]="{'active':selType==2}">
         <img src="../../assets/images/icon-diamond-2.png" alt="">
-        <p>50钻石</p>
+        <p>200钻石</p>
       </div>
     </div>
     <div class="jewelItem fl">
-      <div class="innerBg">
+      <div class="innerBg" (click)="selJewel(500,3)" [ngClass]="{'active':selType==3}">
         <img src="../../assets/images/icon-diamond-3.png" alt="">
-        <p>50钻石</p>
+        <p>500钻石</p>
       </div>
     </div>
     <div class="jewelItem fl">
