@@ -1,4 +1,4 @@
-<div class="logIn" [ngStyle] = "{'height':elHeight}">
+<div class="logIn" [ngStyle] = "{'min-height':elHeight}">
   <div class="logInFormBox">
     <div class="formBoxTitle">
 
@@ -8,14 +8,14 @@
         <div class="iptIcon lIcon">
           <img src="../../assets/images/icon_person.png" alt="">
         </div>
-        <input type="text" placeholder="请输入手机号" class="logInuName">
+        <input type="text"  [(ngModel)] = "loginData.mobile" placeholder="请输入手机号" class="logInuName">
         <div class="iptIcon rIcon"></div>
       </div>
       <div class="inputCtr uPwdBox">
         <div class="iptIcon lIcon">
           <img src="../../assets/images/icon_lock.png" alt="">
         </div>
-        <input type="password" placeholder="请输入密码" class="logInuPwd">
+        <input type="password" [(ngModel)] = "loginData.passworld" placeholder="请输入密码" class="logInuPwd">
         <div class="iptIcon rIcon">
           <img src="../../assets/images/icon_eye.png" alt="">
         </div>
@@ -25,7 +25,7 @@
       <a class="fl">忘记密码</a>
       <a class="fr" routerLink="/regist">免费注册</a>
     </div>
-    <button routerLink="/main" class="logInBtn bigBtn">
+    <button feedButton (click)="logIn()" class="logInBtn bigBtn">
       登陆
     </button>
   </div>
