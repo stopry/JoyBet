@@ -11,6 +11,7 @@ import {UtilService} from './globalServices/util.service';//工具
 import {LoginService} from './globalServices/login.service';//登录
 
 import { AppRoutingModule } from './app-routing.module';
+import {LoginRoutingModule} from './loginRegist/login-routing.module';//登录路由
 
 import { AppComponent } from './app.component';
 import {LoginComponent} from './loginRegist/login.component'
@@ -18,20 +19,20 @@ import {RegistComponent} from './loginRegist/regist.component'
 
 import {FeedButtonDirective} from './directive/feed-button.directive';//交互按钮指令
 
-
 @NgModule({
   declarations: [//声明要用到的模块
     AppComponent,
     LoginComponent,
     RegistComponent,
-    FeedButtonDirective
+    FeedButtonDirective,
   ],
   imports: [//引入的模块
     BrowserModule,
     AppRoutingModule,
+    LoginRoutingModule,
     FormsModule,
     HttpClientModule,
-    HttpModule
+    HttpModule,
   ],
   providers: [
     TipsService,//小提示

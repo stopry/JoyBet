@@ -406,7 +406,7 @@
         height: rem(25);
         line-height: rem(25);
         position: relative;
-        z-index: 100;
+        z-index: 9;
         color: #8c5e28;
         text-align: center;
         float: left;
@@ -637,6 +637,7 @@
     }
   }
   .tableContent{
+    display: none;
     width: rem(358);
     height: rem(300);
     position: relative;
@@ -644,6 +645,9 @@
     border: 1px solid #eee;
     box-sizing: border-box;
     margin: rem(30) auto rem(20) auto;
+    &.active{
+      display: block;
+    }
     .noContent{
       color: #3a230a;
       text-align: center;
@@ -690,3 +694,181 @@
   }
 }
 /*小提示动画end*/
+
+/*遮罩层*/
+.alertLayer{
+  width: 100%;
+  position: fixed;
+  top:0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 10;
+}
+/*遮罩层*/
+
+/*输入钻石数量start*/
+.inputJewelNum{
+  display: none;
+  width: rem(364);
+  height: rem(186);
+  left: rem(25);
+  overflow: hidden;
+  position: fixed;
+  z-index: 11;
+  box-shadow: 0 0 0.2rem rgba(0,0,0,.7);
+  border-radius: rem(16);
+  &.active{
+    display: block;
+  }
+  .formWrap{
+    width: 100%;
+    height: rem(186);
+    position: relative;
+    background: #a86f18;
+    overflow: hidden;
+    .formCon{
+      overflow: hidden;
+      width: rem(353);
+      height: rem(175);
+      margin: rem(5) auto;
+      background: #f8eac7;
+      border-radius: rem(16);
+      box-shadow: 0 0.02rem rgba(0,0,0,.4), inset 0 0 0.02rem rgba(0,0,0,.7);
+      &:before{
+        position: absolute;
+        width: rem(29);
+        height: rem(28);
+        bottom:rem(10);
+        left: rem(10);
+        background: url(../images/dialog-bl.png) no-repeat center;
+        background-size: cover;
+        content: '';
+      }
+      &:after{
+        position: absolute;
+        width: rem(29);
+        height: rem(28);
+        bottom:rem(10);
+        right: rem(10);
+        background: url(../images/dialog-br.png) no-repeat center;
+        background-size: cover;
+        content: '';
+      }
+      .inputWrap{
+        margin: rem(40) auto 0 auto;
+        width: 80%;
+        height: rem(30);
+        .iptJewelNum{
+          border: none;
+          height: rem(30);
+          line-height: rem(30);
+          border-bottom: 1px solid #be6312;
+          color: #be6312;
+          width: 80%;
+          font-size: rem(18);
+        }
+        .iptDesc{
+          font-size: rem(14);
+          color: #be6312;
+          line-height: rem(38);
+          width: 20%;
+          text-align: right;
+        }
+      }
+      .btnWrap{
+        margin: rem(40) auto 0 auto;
+        width: 80%;
+        height: rem(44);
+        .btnCtr{
+          background: url(../images/dialog-btn-cancel.png) no-repeat center;
+          background-size: cover;
+          width: rem(121);
+          height: rem(44);
+          line-height: rem(44);
+          text-align: center;
+          color: #fff;
+          text-shadow: -0.025em -0.025em 0 #757575, 0.08em -0.025em 0 #757575, -0.025em 0.025em 0 #757575, 0.025em 0.025em 0 #757575;
+          &.active{
+            text-shadow: -0.025em -0.025em 0 #ad4600, 0.08em -0.025em 0 #ad4600, -0.025em 0.025em 0 #ad4600, 0.025em 0.025em 0 #ad4600;
+            background: url(../images/dialog-btn-ok.png) no-repeat center;
+            background-size: cover;
+          }
+          font-size: rem(18);
+          font-weight: bold;
+        }
+      }
+    }
+    &:before{
+      position: absolute;
+      width: rem(29);
+      height: rem(28);
+      top:rem(10);
+      left: rem(10);
+      background: url(../images/dialog-tl.png) no-repeat center;
+      background-size: cover;
+      content: '';
+    }
+    &:after{
+      position: absolute;
+      width: rem(29);
+      height: rem(28);
+      top:rem(10);
+      right: rem(10);
+      background: url(../images/dialog-tr.png) no-repeat center;
+      background-size: cover;
+      content: '';
+    }
+  }
+}
+/*输入钻石数量end*/
+
+/*投票框start*/
+.voteWrap{
+  display: none;
+  &.active{
+    display: block;
+  }
+  height: rem(354);
+  .formWrap{
+    height: rem(354);
+    .formCon{
+      height: rem(344);
+      .btnWrap{
+        margin-top: rem(30);
+        margin-bottom: rem(40);
+      }
+      .voteInfo{
+        width: 80%;
+        margin: rem(50) auto rem(0) auto;
+        ul{
+          li{
+            font-size: rem(18);
+            line-height: rem(30);
+            color: #be6312;
+            .selType{
+              display: none;
+              &.active{
+                display: inline;
+              }
+            }
+            .selChitIcon{
+              margin-bottom: rem(-4);
+              margin-right: rem(3);
+              display: inline-block;
+              height: rem(20);
+              width: rem(20);
+              border-radius: 50%;
+              background: url("../images/checkbox.png") no-repeat left;
+              background-size: cover;
+              &.active{
+                background: url("../images/checkbox.png") no-repeat right;
+                background-size: cover;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*投票框end*/

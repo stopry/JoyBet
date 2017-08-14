@@ -45,13 +45,13 @@
     </div>
   </header>
   <div class="chartNavBox">
-    <div class="chartNavBoxItem active">
+    <div class="chartNavBoxItem" (click)="changeChartData(1)" [ngClass]="{'active':currentIndex==1?true:false,'disabled':tableIndex[0].isActive?false:true}">
       B
     </div>
-    <div class="chartNavBoxItem">
+    <div class="chartNavBoxItem" (click)="changeChartData(2)" [ngClass]="{'active':currentIndex==2?true:false,'disabled':tableIndex[1].isActive?false:true}">
       Y
     </div>
-    <div class="chartNavBoxItem disabled">
+    <div class="chartNavBoxItem" (click)="changeChartData(3)" [ngClass]="{'active':currentIndex==3?true:false,'disabled':tableIndex[2].isActive?false:true}">
       H
     </div>
   </div>

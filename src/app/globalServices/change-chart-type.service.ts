@@ -111,7 +111,7 @@ export class ChangeChartTypeService{
         y2:26,
         height:'auto'
       },
-      animation: false,
+      animation: true,
       series: [
         {
           type: 'candlestick',

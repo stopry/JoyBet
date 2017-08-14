@@ -7,7 +7,10 @@ import {Component,OnInit} from '@angular/core';
 
 export class VoteListComponent implements OnInit{
   constructor(){}
-
+  private listType:number = 1;//列表类型-当前投票单
+  changeType(type:number){
+    this.listType = type;
+  }
   ngOnInit(){
 
   }

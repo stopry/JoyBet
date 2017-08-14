@@ -10,10 +10,10 @@
       投票倒计时
     </div>
     <div class="progressCon">
-      <div class="progressBar">
+      <div class="progressBar" [ngStyle]="{'width':(countNum/59*98)+'%'}">
 
       </div>
-      <p class="countDown">59:00</p>
+      <p class="countDown">00:{{countNum}}</p>
     </div>
   </div>
   <div class="chartTypeChange">
@@ -53,14 +53,14 @@
       </div>
     </div>
     <div class="jewelItem fl">
-      <div class="innerBg">
+      <div class="innerBg" (click)="openSelJewel()">
         <img src="../../assets/images/icon-diamond.png" alt="">
         <p>自定义钻石</p>
       </div>
     </div>
   </div>
   <div class="voteArea">
-    <div class="voteBtn voteRed">
+    <div class="voteBtn voteRed" (click)="openVoteWrap('1')">
       <h3 class="tc">投票红</h3>
       <p class="tc">
         热度:100%
@@ -69,11 +69,53 @@
     <div class="reaIcon">
 
     </div>
-    <div class="voteBtn voteGreen">
+    <div class="voteBtn voteGreen" (click)="openVoteWrap('2')">
       <h3 class="tc">投票红</h3>
       <p class="tc">
         热度:100%
       </p>
+    </div>
+  </div>
+</div>
+<div vertical class="inputJewelNum" [ngClass]="{'active':isShowIptJewel}">
+  <div class="formWrap">
+    <div class="formCon">
+      <div class="inputWrap">
+        <input type="text" class="iptJewelNum tc disbl fl" placeholder="请输入50~500">
+        <p class="iptDesc fr">钻石</p>
+      </div>
+      <div class="btnWrap">
+        <div class="btnCtr btnOk active fl" (click)="closeSelJewel()">确认</div>
+        <div class="btnCtr btnCancel fr" (click)="closeSelJewel()">取消</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--投票弹出框-->
+<div vertical class="inputJewelNum voteWrap" [ngClass]="{'active':isShowVoteWrap}">
+  <div class="formWrap">
+    <div class="formCon">
+      <div class="voteInfo">
+        <ul class="w100">
+          <li class="w100">游戏类型：{{voteData.type}}</li>
+          <li class="w100">最新指数：{{voteData.index}}</li>
+          <li class="w100">
+            所选阵营：
+            <span class="selType" [ngClass]="{'active':voteData.selType==1}" style="color: red">红</span>
+            <span class="selType" [ngClass]="{'active':voteData.selType==2}" style="color: green">绿</span>
+          </li>
+          <li class="w100">投票钻石：{{voteData.jewelNums}}</li>
+          <li class="w100">所选周期：{{voteData.cycel}}</li>
+          <li class="w100">
+            代金券：
+            <span class="Chit" (click)="selChit()"><i class="selChitIcon" [ngClass]="{'active':voteData.chit}"></i>使用一张(一张可用)</span>
+          </li>
+        </ul>
+      </div>
+      <div class="btnWrap">
+        <div class="btnCtr btnOk active fl" (click)="closeVoteWrap()">确认</div>
+        <div class="btnCtr btnCancel fr" (click)="closeVoteWrap()">取消</div>
+      </div>
     </div>
   </div>
 </div>

@@ -18,4 +18,20 @@ export class TipsService{
       $alert.remove();
     }, 2000);
   }
+  private $layer;
+  //显示遮罩层
+  showLayer(){
+    if(!this.$layer){
+      this.$layer = $('<div class="alertLayer"></div>');
+      this.$layer.css({
+        height:$(window).height()
+      });
+      $('body').append(this.$layer);
+    }
+    this.$layer.show();
+  }
+  //隐藏遮罩层
+  hideLayer(){
+    this.$layer.hide();
+  }
 }

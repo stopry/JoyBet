@@ -4,10 +4,10 @@ import {LoginComponent} from  './loginRegist/login.component'
 import {RegistComponent} from  './loginRegist/regist.component'
 
 const appRoutes:Routes = [
-  {
-    path:'logIn',//登陆界面
-    component:LoginComponent
-  },
+  //{
+  //  path:'logIn',//登陆界面
+  //  component:LoginComponent
+  //},
   {
     path:'regist',//注册界面
     component:RegistComponent

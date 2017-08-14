@@ -1,6 +1,8 @@
 import {Component,OnInit} from '@angular/core';
 import {Router} from '@angular/router'
 
+import { AuthService } from '../globalServices/auth.service';
+
 import {TipsService} from "../globalServices/tips.service";
 import {UtilService} from "../globalServices/util.service";
 import {LoginService} from "../globalServices/login.service";
@@ -14,16 +16,17 @@ import {LoginService} from "../globalServices/login.service";
 export class LoginComponent implements OnInit{
   constructor(
     private tips:TipsService,
-    private router:Router,
+    public router:Router,
     private util:UtilService,
-    private toLogIn:LoginService
+    private toLogIn:LoginService,
+    public authService:AuthService
   ){
 
   }
 
   public loginData = {
-    mobile:'',
-    passworld:''
+    mobile:'13855418476',
+    passworld:'123456'
   };
 
   elHeight:string;//logIn容器的高度
@@ -34,8 +37,6 @@ export class LoginComponent implements OnInit{
   private hero;
   logIn(){
     if(!this.util.regExp().mobileNum.test(this.loginData.mobile)){
-      this.toLogIn.logIn();
-      console.log(this.toLogIn.logIn.then(hero => this.hero = hero))
       this.showTips('请输入正确手机号');
       return;
     }else if(!this.loginData.passworld){
@@ -46,13 +47,25 @@ export class LoginComponent implements OnInit{
       return;
     }else{
       this.showTips('登录成功');
-      this.toLogIn.logIn();
-      //this.router.navigate(['/main'])
-    }
 
+      //发布时打开
+      //this.toLogIn.logIn().then((data) => {
+      //    console.log(data)
+      //});
+
+      //以下为模拟登陆
+      this.authService.login().subscribe(() => {
+        if (this.authService.isLoggedIn) {
+          let redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '/main';
+          this.router.navigate([redirect]);
+        }
+      });
+    }
+  }
+  logout() {//退出登录
+    this.authService.logout();
   }
   ngOnInit(){
-
     this.elHeight = window.innerHeight+'px'
   }
 

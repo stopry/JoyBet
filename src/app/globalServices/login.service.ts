@@ -11,10 +11,12 @@ export class LoginService{
   ){}
 
   private headers = new Headers({'Content-Type':'application/json'});
-  private loginUrl = '/';
+  private loginUrl = '/';//发布时替换为正确url
 
-  public logIn():Promise<any>{
+  logIn(){
     return this.http.get(this.loginUrl)
       .toPromise()
+      .then(response => response)
   }
+
 }

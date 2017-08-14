@@ -347,7 +347,7 @@
       height: 0.60386rem;
       line-height: 0.60386rem;
       position: relative;
-      z-index: 100;
+      z-index: 9;
       color: #8c5e28;
       text-align: center;
       float: left;
@@ -540,6 +540,7 @@
         background: url(../images/tab-active.png) no-repeat center;
         background-size: cover; }
   .voteList .tableContent {
+    display: none;
     width: 8.64734rem;
     height: 7.24638rem;
     position: relative;
@@ -547,6 +548,8 @@
     border: 1px solid #eee;
     box-sizing: border-box;
     margin: 0.72464rem auto 0.48309rem auto; }
+    .voteList .tableContent.active {
+      display: block; }
     .voteList .tableContent .noContent {
       color: #3a230a;
       text-align: center;
@@ -584,3 +587,153 @@
     transform: translateY(-100%); } }
 
 /*小提示动画end*/
+/*遮罩层*/
+.alertLayer {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10; }
+
+/*遮罩层*/
+/*输入钻石数量start*/
+.inputJewelNum {
+  display: none;
+  width: 8.79227rem;
+  height: 4.49275rem;
+  left: 0.60386rem;
+  overflow: hidden;
+  position: fixed;
+  z-index: 11;
+  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.7);
+  border-radius: 0.38647rem; }
+  .inputJewelNum.active {
+    display: block; }
+  .inputJewelNum .formWrap {
+    width: 100%;
+    height: 4.49275rem;
+    position: relative;
+    background: #a86f18;
+    overflow: hidden; }
+    .inputJewelNum .formWrap .formCon {
+      overflow: hidden;
+      width: 8.52657rem;
+      height: 4.22705rem;
+      margin: 0.12077rem auto;
+      background: #f8eac7;
+      border-radius: 0.38647rem;
+      box-shadow: 0 0.02rem rgba(0, 0, 0, 0.4), inset 0 0 0.02rem rgba(0, 0, 0, 0.7); }
+      .inputJewelNum .formWrap .formCon:before {
+        position: absolute;
+        width: 0.70048rem;
+        height: 0.67633rem;
+        bottom: 0.24155rem;
+        left: 0.24155rem;
+        background: url(../images/dialog-bl.png) no-repeat center;
+        background-size: cover;
+        content: ''; }
+      .inputJewelNum .formWrap .formCon:after {
+        position: absolute;
+        width: 0.70048rem;
+        height: 0.67633rem;
+        bottom: 0.24155rem;
+        right: 0.24155rem;
+        background: url(../images/dialog-br.png) no-repeat center;
+        background-size: cover;
+        content: ''; }
+      .inputJewelNum .formWrap .formCon .inputWrap {
+        margin: 0.96618rem auto 0 auto;
+        width: 80%;
+        height: 0.72464rem; }
+        .inputJewelNum .formWrap .formCon .inputWrap .iptJewelNum {
+          border: none;
+          height: 0.72464rem;
+          line-height: 0.72464rem;
+          border-bottom: 1px solid #be6312;
+          color: #be6312;
+          width: 80%;
+          font-size: 0.43478rem; }
+        .inputJewelNum .formWrap .formCon .inputWrap .iptDesc {
+          font-size: 0.33816rem;
+          color: #be6312;
+          line-height: 0.91787rem;
+          width: 20%;
+          text-align: right; }
+      .inputJewelNum .formWrap .formCon .btnWrap {
+        margin: 0.96618rem auto 0 auto;
+        width: 80%;
+        height: 1.0628rem; }
+        .inputJewelNum .formWrap .formCon .btnWrap .btnCtr {
+          background: url(../images/dialog-btn-cancel.png) no-repeat center;
+          background-size: cover;
+          width: 2.92271rem;
+          height: 1.0628rem;
+          line-height: 1.0628rem;
+          text-align: center;
+          color: #fff;
+          text-shadow: -0.025em -0.025em 0 #757575, 0.08em -0.025em 0 #757575, -0.025em 0.025em 0 #757575, 0.025em 0.025em 0 #757575;
+          font-size: 0.43478rem;
+          font-weight: bold; }
+          .inputJewelNum .formWrap .formCon .btnWrap .btnCtr.active {
+            text-shadow: -0.025em -0.025em 0 #ad4600, 0.08em -0.025em 0 #ad4600, -0.025em 0.025em 0 #ad4600, 0.025em 0.025em 0 #ad4600;
+            background: url(../images/dialog-btn-ok.png) no-repeat center;
+            background-size: cover; }
+    .inputJewelNum .formWrap:before {
+      position: absolute;
+      width: 0.70048rem;
+      height: 0.67633rem;
+      top: 0.24155rem;
+      left: 0.24155rem;
+      background: url(../images/dialog-tl.png) no-repeat center;
+      background-size: cover;
+      content: ''; }
+    .inputJewelNum .formWrap:after {
+      position: absolute;
+      width: 0.70048rem;
+      height: 0.67633rem;
+      top: 0.24155rem;
+      right: 0.24155rem;
+      background: url(../images/dialog-tr.png) no-repeat center;
+      background-size: cover;
+      content: ''; }
+
+/*输入钻石数量end*/
+/*投票框start*/
+.voteWrap {
+  display: none;
+  height: 8.55072rem; }
+  .voteWrap.active {
+    display: block; }
+  .voteWrap .formWrap {
+    height: 8.55072rem; }
+    .voteWrap .formWrap .formCon {
+      height: 8.30918rem; }
+      .voteWrap .formWrap .formCon .btnWrap {
+        margin-top: 0.72464rem;
+        margin-bottom: 0.96618rem; }
+      .voteWrap .formWrap .formCon .voteInfo {
+        width: 80%;
+        margin: 1.20773rem auto 0rem auto; }
+        .voteWrap .formWrap .formCon .voteInfo ul li {
+          font-size: 0.43478rem;
+          line-height: 0.72464rem;
+          color: #be6312; }
+          .voteWrap .formWrap .formCon .voteInfo ul li .selType {
+            display: none; }
+            .voteWrap .formWrap .formCon .voteInfo ul li .selType.active {
+              display: inline; }
+          .voteWrap .formWrap .formCon .voteInfo ul li .selChitIcon {
+            margin-bottom: -0.09662rem;
+            margin-right: 0.07246rem;
+            display: inline-block;
+            height: 0.48309rem;
+            width: 0.48309rem;
+            border-radius: 50%;
+            background: url("../images/checkbox.png") no-repeat left;
+            background-size: cover; }
+            .voteWrap .formWrap .formCon .voteInfo ul li .selChitIcon.active {
+              background: url("../images/checkbox.png") no-repeat right;
+              background-size: cover; }
+
+/*投票框end*/
