@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit{
     passworld:'123456'
   };
 
-  elHeight:string;//logIn容器的高度
+  public elHeight:string;//logIn容器的高度
 
   showTips(msg:string){
     this.tips._alert(msg);

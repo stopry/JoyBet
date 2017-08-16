@@ -7,7 +7,7 @@ import {Component,OnInit} from '@angular/core';
 
 export class RegistComponent implements OnInit{
 
-  private elHeight:string;//窗口高度
+  public elHeight:string;//窗口高度
 
   constructor(
 

@@ -27,7 +27,7 @@ export class VoteIndexComponent implements OnInit,AfterViewInit{
   };
 
   //倒计时
-  private countNum = 59;//倒计时初始值
+  public countNum = 59;//倒计时初始值
   countDown(){
     let down = setInterval(()=>{
       this.countNum--;
@@ -45,11 +45,11 @@ export class VoteIndexComponent implements OnInit,AfterViewInit{
 
   //默认选中的钻石数量
   private jewelNum = 50;
-  private selType = 1;//钻石类型
+  public selType = 1;//钻石类型
 
   public Ctype:ChangeChartTypeService = new ChangeChartTypeService();
 
-  private chartType:number = 1;//k线图
+  public chartType:number = 1;//k线图
 
   isShowIptJewel:boolean = false;//是否显示钻石输入框
   isShowVoteWrap:boolean = false;//是否显示钻石输入框
@@ -66,7 +66,7 @@ export class VoteIndexComponent implements OnInit,AfterViewInit{
     chit:false//是否使用代金券
   };
 
-  private selChit():void{
+  public selChit():void{
     this.voteData.chit=!this.voteData.chit
   }
 

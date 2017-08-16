@@ -101,8 +101,8 @@
           <li class="w100">最新指数：{{voteData.index}}</li>
           <li class="w100">
             所选阵营：
-            <span class="selType" [ngClass]="{'active':voteData.selType==1}" style="color: red">红</span>
-            <span class="selType" [ngClass]="{'active':voteData.selType==2}" style="color: green">绿</span>
+            <span class="selType" [ngClass]="{'active':voteData.selType=='1'}" style="color: red">红</span>
+            <span class="selType" [ngClass]="{'active':voteData.selType=='2'}" style="color: green">绿</span>
           </li>
           <li class="w100">投票钻石：{{voteData.jewelNums}}</li>
           <li class="w100">所选周期：{{voteData.cycel}}</li>

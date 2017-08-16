@@ -16,7 +16,7 @@ export class MainComponent implements OnInit,AfterViewInit{
   constructor(
 
   ){};
-  elHeight:string;//主界面高度
+  public elHeight:string;//主界面高度
 
   //大按钮index
   public tableIndex = [
