@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';//浏览器模块
 import { NgModule } from '@angular/core';
+import {HashLocationStrategy,LocationStrategy} from '@angular/common';
 
 import { Router } from '@angular/router';//路由模块
 import { FormsModule }    from '@angular/forms';//表单模块
@@ -35,6 +36,10 @@ import {FeedButtonDirective} from './directive/feed-button.directive';//交互�
     HttpModule,
   ],
   providers: [
+    {
+      provide:LocationStrategy,
+      useClass:HashLocationStrategy
+    },
     TipsService,//小提示
     UtilService,//工具
     LoginService
