@@ -593,6 +593,12 @@
         }
       }
     }
+    p.otherJewel{
+      display: none;
+      &.active{
+        display: inline-block;
+      }
+    }
   }
 /*投票指数end*/
 /*投票列表start*/

@@ -1,5 +1,6 @@
 import { NgModule }       from '@angular/core';
 import { CommonModule }   from '@angular/common';
+import { FormsModule }    from '@angular/forms';//表单模块
 
 import {MainRoutingModule} from './main-routing.module'
 
@@ -16,6 +17,7 @@ import {VerticalCenterDirective} from '../directive/vertical-center.directive';/
 @NgModule({
   imports:[
     CommonModule,
+    FormsModule,
     MainRoutingModule,
     EchartsNg2Module
   ],

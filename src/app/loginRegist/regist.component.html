@@ -8,17 +8,17 @@
         <div class="iptIcon lIcon">
           <img src="../../assets/images/icon_phone.png" alt="">
         </div>
-        <input type="text" placeholder="请输入手机号码" class="logInuName">
+        <input type="text" placeholder="请输入手机号码" [(ngModel)]="registData.mobile"  class="logInuName">
         <div class="iptIcon rIcon"></div>
       </div>
       <div class="inputCtr uPwdBox">
         <div class="iptIcon lIcon">
           <img src="../../assets/images/icon_invite.png" alt="">
         </div>
-        <input type="text" class="logInuPwd" placeholder="请输入邀请码">
+        <input type="text" class="logInuPwd" [(ngModel)]="registData.inviteCode" placeholder="请输入邀请码">
       </div>
     </div>
-    <button feedButton class="logInBtn bigBtn">
+    <button feedButton class="logInBtn bigBtn" (click)="toNext()">
       下一步
     </button>
   </div>

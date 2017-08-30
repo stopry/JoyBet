@@ -47,6 +47,8 @@ export class VoteIndexComponent implements OnInit,AfterViewInit{
   private jewelNum = 50;
   public selType = 1;//钻石类型
 
+  public inputJewelNum:any;//弹出框输入的钻石
+
   public Ctype:ChangeChartTypeService = new ChangeChartTypeService();
 
   public chartType:number = 1;//k线图
@@ -66,6 +68,7 @@ export class VoteIndexComponent implements OnInit,AfterViewInit{
     chit:false//是否使用代金券
   };
 
+  //选择代金券
   public selChit():void{
     this.voteData.chit=!this.voteData.chit
   }
@@ -115,14 +118,35 @@ export class VoteIndexComponent implements OnInit,AfterViewInit{
     this.jewelNum = num;
     this.selType = type;
   }
-  openSelJewel(){//打开输入砖石框
+
+  //打开输入砖石框
+  openSelJewel(){
     this.tips.showLayer();
     this.isShowIptJewel = true;
   }
-  closeSelJewel(){//关闭输入砖石框
+
+  //关闭输入砖石框
+  closeSelJewel(){
     this.tips.hideLayer();
     this.isShowIptJewel = false;
   }
+
+  //确认输入砖石
+  confirmInputJewel(){
+    if(typeof parseInt(this.inputJewelNum)!="number"){
+      this.tips._alert('请输入正确数量');
+      return;
+    }else if(parseInt(this.inputJewelNum)>500||parseInt(this.inputJewelNum)<50){
+      this.tips._alert('请输入50-500范围内数量');
+      return;
+    }else{
+      this.voteData.jewelNums = parseInt(this.inputJewelNum);
+      this.jewelNum = parseInt(this.inputJewelNum);
+      this.selType = 4;
+      this.closeSelJewel();
+    }
+  }
+
   //图标数据切换,点击大按钮
   changeChartData(type:number){
     this.initChart();

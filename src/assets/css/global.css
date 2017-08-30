@@ -501,6 +501,10 @@
           top: 0;
           background: url(../images/chart-tab-active.png) no-repeat center;
           background-size: cover; }
+  .voteIndex p.otherJewel {
+    display: none; }
+    .voteIndex p.otherJewel.active {
+      display: inline-block; }
 
 /*投票指数end*/
 /*投票列表start*/

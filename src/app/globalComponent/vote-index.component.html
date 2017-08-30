@@ -53,9 +53,10 @@
       </div>
     </div>
     <div class="jewelItem fl">
-      <div class="innerBg" (click)="openSelJewel()">
+      <div class="innerBg" (click)="openSelJewel()" [ngClass]="{'active':selType==4}">
         <img src="../../assets/images/icon-diamond.png" alt="">
-        <p>自定义钻石</p>
+        <p class="otherJewel" [ngClass]="{'active':selType!=4}">自定义钻石</p>
+        <p class="otherJewel" [ngClass]="{'active':selType==4}">{{inputJewelNum}}钻石</p>
       </div>
     </div>
   </div>
@@ -81,11 +82,11 @@
   <div class="formWrap">
     <div class="formCon">
       <div class="inputWrap">
-        <input type="text" class="iptJewelNum tc disbl fl" placeholder="请输入50~500">
+        <input type="number" [(ngModel)] = "inputJewelNum" placeholder="请输入50~500" class="iptJewelNum tc disbl fl" >
         <p class="iptDesc fr">钻石</p>
       </div>
       <div class="btnWrap">
-        <div class="btnCtr btnOk active fl" (click)="closeSelJewel()">确认</div>
+        <div class="btnCtr btnOk active fl" (click)="confirmInputJewel()">确认</div>
         <div class="btnCtr btnCancel fr" (click)="closeSelJewel()">取消</div>
       </div>
     </div>
