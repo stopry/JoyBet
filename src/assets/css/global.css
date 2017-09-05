@@ -512,7 +512,8 @@
   width: 9.2029rem;
   margin: 0 auto;
   padding: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  /*投票列表item*/ }
   .voteList .tableHeader {
     top: 0.36232rem;
     left: 0.24155rem;
@@ -561,6 +562,55 @@
       height: 7.24638rem;
       line-height: 7.24638rem;
       font-size: 0.28986rem; }
+  .voteList .listContent {
+    overflow-y: auto; }
+    .voteList .listContent .contentItem {
+      line-height: 0.48309rem;
+      width: 8.4058rem;
+      height: 3.4058rem;
+      background: #ffdf93;
+      box-shadow: inset 0 0 0.16rem #daa757;
+      margin: 0.14493rem auto;
+      border-radius: 0.07246rem; }
+      .voteList .listContent .contentItem .ItemL {
+        height: 1.98068rem;
+        width: 1.8599rem;
+        margin: 0.96618rem auto; }
+        .voteList .listContent .contentItem .ItemL .NoNum {
+          width: 0.77295rem;
+          height: 0.77295rem;
+          color: #fff;
+          line-height: 0.77295rem;
+          font-size: 0.33816rem;
+          text-align: center;
+          border-radius: 50%;
+          background-image: -webkit-linear-gradient(90deg, #fb4a56, #ff8c94);
+          box-sizing: border-box;
+          border: 2px solid #fff;
+          margin: 0 auto; }
+        .voteList .listContent .contentItem .ItemL .NoText {
+          color: #bc2933;
+          font-size: 0.33816rem;
+          height: 0.72464rem;
+          text-align: center; }
+        .voteList .listContent .contentItem .ItemL.fail .NoNum {
+          background-image: -webkit-linear-gradient(90deg, #50bb09, #7ce736); }
+        .voteList .listContent .contentItem .ItemL.fail .NoText {
+          color: #317206; }
+      .voteList .listContent .contentItem .ItemR {
+        text-align: left;
+        font-size: 0.31401rem;
+        line-height: 0.4372rem;
+        width: auto;
+        height: 2.6087rem;
+        padding-left: .3rem;
+        background: url(../images/line.png) 0 no-repeat;
+        background-size: auto 100%;
+        margin-top: 0.43478rem;
+        color: #7c411a;
+        font-weight: bold; }
+        .voteList .listContent .contentItem .ItemR .itemDetail:last-child {
+          color: #ba4a00; }
 
 /*投票列表end*/
 /*小提示动画start*/

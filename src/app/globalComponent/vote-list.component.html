@@ -8,13 +8,55 @@
     </div>
   </div>
   <div class="tableContent vote" [ngClass]="{'active':listType==1?true:false}">
-    <div class="noContent">
+    <div class="noContent" *ngIf="!nowDatas">
       暂无投票记录
     </div>
+    <ul class="noContent listContent" *ngIf="nowDatas">
+      <li class="w100 ovhd contentItem" *ngFor="let item of nowDatas;index as i">
+        <!--fail是失败场次-->
+        <div class="fl ItemL" [ngClass]="{'fail':!item.result}">
+          <div class="disbl NoNum">
+            {{i+1}}
+          </div>
+          <div class="NoText">
+            {{item.result?'投红':'投绿'}}
+          </div>
+        </div>
+        <div class="fl ItemR">
+          <div class="itemDetail">游戏类型：{{item.type}}</div>
+          <div class="itemDetail">场次：{{item.session}}</div>
+          <div class="itemDetail">投票钻石：{{item.jewelNum}}</div>
+          <div class="itemDetail">预计战绩：{{item.score}}</div>
+          <div class="itemDetail">实时指数：{{item.nowIndex}}</div>
+          <div class="itemDetail">游戏倒数：{{item.countDown}}</div>
+        </div>
+      </li>
+    </ul>
   </div>
   <div class="tableContent voteHistory" [ngClass]="{'active':listType==2?true:false}">
-    <div class="noContent">
+    <div class="noContent" *ngIf="!historyDatas">
       暂无历史记录
     </div>
+    <ul class="noContent listContent" *ngIf="historyDatas">
+      <li class="w100 ovhd contentItem" *ngFor="let item of historyDatas;index as i">
+        <!--fail是失败场次-->
+        <div class="fl ItemL" [ngClass]="{'fail':!item.result}">
+          <div class="disbl NoNum">
+            {{i+1}}
+          </div>
+          <div class="NoText">
+            {{item.result?'胜利':'失败'}}
+          </div>
+        </div>
+        <div class="fl ItemR">
+          <div class="itemDetail">游戏类型：{{item.type}}</div>
+          <div class="itemDetail">场次：{{item.session}}</div>
+          <div class="itemDetail">投票钻石：{{item.jewelNum}}</div>
+          <div class="itemDetail">战绩：{{item.score}}</div>
+          <div class="itemDetail">投票时间：{{item.time}}</div>
+          <div class="itemDetail">指数变化：{{item.change}}</div>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>

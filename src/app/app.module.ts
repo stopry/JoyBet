@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';//浏览器模块
 import { NgModule } from '@angular/core';
-import {HashLocationStrategy,LocationStrategy} from '@angular/common';
+import {HashLocationStrategy,LocationStrategy} from '@angular/common';//解决打包后，页面刷新404错误
 
 import { Router } from '@angular/router';//路由模块
 import { FormsModule }    from '@angular/forms';//表单模块

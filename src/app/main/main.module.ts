@@ -8,11 +8,13 @@ import {MainComponent} from './main.component';
 
 import {EchartsNg2Module} from 'echarts-ng2';//echarts模块
 
+import {VoteListService} from "../globalServices/vote-list.service";//得到投票列表数据服务
+
 import {VoteIndexComponent} from '../globalComponent/vote-index.component';//投票指数组件
 import {VoteListComponent} from '../globalComponent/vote-list.component';//投票列表组件
 
-import {VerticalCenterDirective} from '../directive/vertical-center.directive';//垂直居中指令
-
+//垂直居中指令
+import {VerticalCenterDirective} from '../directive/vertical-center.directive';
 
 @NgModule({
   imports:[
@@ -26,6 +28,9 @@ import {VerticalCenterDirective} from '../directive/vertical-center.directive';/
     VoteIndexComponent,
     VoteListComponent,
     VerticalCenterDirective
+  ],
+  providers:[
+    VoteListService
   ]
 })
 

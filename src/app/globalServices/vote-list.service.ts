@@ -1,5 +1,4 @@
 import {Injectable} from '@angular/core';
-//import 'rxjs/add/operator/toPromise';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
@@ -15,16 +14,22 @@ export class VoteListService{
 
   ){}
 
-  getVoteNowDatas(){//得到正在投票的数据
+  historyDatas:any;//历史投票数据
+  nowDatas:any;//现在投票数据
 
-  };
-
-  historyDatas:any;
-
-  getVoteHistoryDatas():Observable<any>{//得到历史投票数据
-
+  //得到历史投票数据
+  getVoteHistoryDatas():Observable<any>{
     return Observable.of(new VoteList().voteHistory()).delay(500).do(
       val=>this.historyDatas = new VoteList().voteHistory()
     );
-  }
+  };
+  //得到现在投票数据
+  /**
+   @Observable<any> 任意类型的可观察对象
+   */
+  getVoteNowDatas():Observable<any>{
+    return Observable.of(new VoteList().voteNow()).delay(500).do(
+      val=>this.nowDatas = new VoteList().voteNow()
+    );
+  };
 }
